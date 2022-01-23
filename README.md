@@ -2,13 +2,16 @@
 
 ![workflow](https://github.com/Kevin-Sim/lab02/actions/workflows/main.yml/badge.svg)
 
-![LICENSE](https://img.shields.io/github/license/Kevin-Sim/lab02.svg?style=flat-square)](https://github.com/Kevin-Sim/lab02/blob/master/LICENSE)
+![GitHub](https://img.shields.io/github/license/Kevin-Sim/lab02?style=flat-square)
 
-![Releases](https://img.shields.io/github/release/Kevin-Sim/lab02/all.svg?style=flat-square)](https://github.com/Kevin-Sim/lab02/releases)
+![LICENSE](https://img.shields.io/github/license/Kevin-Sim/lab02.svg?style=flat-square)
+
+![Releases](https://img.shields.io/github/release/Kevin-Sim/lab02/all.svg?style=flat-square)
 
 ```
 
 ![GitHub](https://img.shields.io/github/license/Kevin-Sim/lab02)
+
 git rm --cached seMethods.iml
 git checkout -m "remove iml"
 git push
