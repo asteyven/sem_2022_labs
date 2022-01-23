@@ -2,6 +2,12 @@
 
 ![workflow](https://github.com/Kevin-Sim/lab02/actions/workflows/main.yml/badge.svg)
 
+`[![LICENSE](https://img.shields.io/github/license/Kevin-Sim/lab02.svg?style=flat-square)](https://github.com/<Kevin-Sim/lab02/blob/master/LICENSE)`
+
+Just replace `<github-username>` with your GitHub username.  The release badge is:
+
+`[![Releases](https://img.shields.io/github/release/Kevin-Sim/lab02/all.svg?style=flat-square)](https://github.com/Kevin-Sim/lab02/releases)`
+
 ```
 git rm --cached seMethods.iml
 git checkout -m "remove iml"
