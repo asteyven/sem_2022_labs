@@ -4,8 +4,6 @@
 
 ![GitHub](https://img.shields.io/github/license/Kevin-Sim/lab02?style=flat-square)
 
-![LICENSE](https://img.shields.io/github/license/Kevin-Sim/lab02.svg?style=flat-square)
-
 ![Releases](https://img.shields.io/github/release/Kevin-Sim/lab02/all.svg?style=flat-square)
 
 ```
