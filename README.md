@@ -1,5 +1,6 @@
 # SEM_Demo
 
+![workflow](https://github.com/Kevin-Sim/lab02/actions/workflows/main.yml/badge.svg)
 
 ```
 git rm --cached seMethods.iml
