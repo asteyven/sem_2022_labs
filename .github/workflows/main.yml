@@ -21,7 +21,7 @@ jobs:
       - name: Build with Maven
         run: mvn package
       - name: Build
-        run: docker build -t semethods .
+        run: docker build -t se_methods .
       - name: Run image
         run: docker run --network se-methods --name semcontainer se_methods
       - name: view logs
