@@ -1,11 +1,12 @@
 # SEM_Demo
 
+Master Build  ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/Kevin-Sim/sem_lab02/A%20workflow%20for%20my%20Hello%20World%20App/master?style=flat-square)
 
-Develop Build Status ![example branch parameter](https://github.com/Kevin-Sim/lab02/actions/workflows/main.yml/badge.svg?branch=develop)
+Develop Build  ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/Kevin-Sim/sem_lab02/A%20workflow%20for%20my%20Hello%20World%20App/develop?style=flat-square)
 
 ![GitHub](https://img.shields.io/github/license/Kevin-Sim/lab02?style=flat-square)
 
-![Releases](https://img.shields.io/github/release/Kevin-Sim/lab02/all.svg?style=flat-square)
+![Releases](https://img.shields.io/github/release/Kevin-Sim/lab02?style=flat-square)
 
 ```
 
