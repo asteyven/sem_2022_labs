@@ -14,7 +14,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Setup network
-          run: |
+          run:
             docker network create --driver bridge se-methods
             docker pull mongo
             docker run -d --name mongo-dbserver --network se-methods mongo
