@@ -1,6 +1,6 @@
 # SEM_Demo
 
-![workflow](https://github.com/Kevin-Sim/lab02/actions/workflows/main.yml/badge.svg)
+![example branch parameter](https://github.com/Kevin-Sim/lab02/actions/workflows/main.yml/badge.svg?branch=develop)
 
 ![GitHub](https://img.shields.io/github/license/Kevin-Sim/lab02?style=flat-square)
 
