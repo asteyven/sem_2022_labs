@@ -8,14 +8,16 @@ License ![GitHub](https://img.shields.io/github/license/Kevin-Sim/sem_2022_labs)
 
 ![Releases](https://img.shields.io/github/release/Kevin-Sim/sem_2022_labs?style=flat-square)
 
-```
 
-![GitHub](https://img.shields.io/github/license/Kevin-Sim/lab02)
+To tag 
 
-git rm --cached seMethods.iml
-git checkout -m "remove iml"
-git push
-```
+`git tag V0.1-alpha-3`
+
+To push tag 
+
+`git push origin tag_name`
+
+
 
 connect to a running docker container
 
