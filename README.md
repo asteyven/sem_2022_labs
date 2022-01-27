@@ -13,7 +13,7 @@ To tag
 
 `git tag V0.1-alpha-3`
 
-To push tag 
+To push tags
 
 `git push origin tag_name`
 
