@@ -95,7 +95,7 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT emp_no, first_name, last_name "
+                    "SELECT * "
                             + "FROM employees "
                             + "WHERE emp_no = " + ID;
             // Execute SQL statement
@@ -108,6 +108,8 @@ public class App
                 emp.emp_no = rset.getInt("emp_no");
                 emp.first_name = rset.getString("first_name");
                 emp.last_name = rset.getString("last_name");
+                java.sql.Date date = rset.getDate("birth_date");
+                System.out.println(date);
                 return emp;
             }
             else
