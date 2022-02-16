@@ -18,10 +18,6 @@ public class App
 
         // Connect to database
         a.connect();
-        // Get Employee
-        Employee emp = a.getEmployee(255530);
-        // Display results
-        a.displayEmployee(emp);
 
         // Disconnect from database
         a.disconnect();
@@ -52,7 +48,7 @@ public class App
                 // Wait a bit for db to start
                 Thread.sleep(0);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://localhost:33060/employees?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }
@@ -87,7 +83,7 @@ public class App
         }
     }
 
-    public Employee getEmployee(int ID)
+    public void getEmployee(int ID)
     {
         try
         {
@@ -105,37 +101,22 @@ public class App
             // Check one is returned
             if (rset.next())
             {
-                Employee emp = new Employee();
-                emp.emp_no = rset.getInt("emp_no");
-                emp.first_name = rset.getString("first_name");
-                emp.last_name = rset.getString("last_name");
-                java.sql.Date date = rset.getDate("birth_date");
-                System.out.println(date);
-                return emp;
+//                Employee emp = new Employee();
+//                emp.emp_no = rset.getInt("emp_no");
+//                emp.first_name = rset.getString("first_name");
+//                emp.last_name = rset.getString("last_name");
+//                java.sql.Date date = rset.getDate("birth_date");
+//                System.out.println(date);
+                return ;
             }
             else
-                return null;
+                return;
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get employee details");
-            return null;
-        }
-    }
-
-    public void displayEmployee(Employee emp)
-    {
-        if (emp != null)
-        {
-            System.out.println(
-                    emp.emp_no + " "
-                            + emp.first_name + " "
-                            + emp.last_name + "\n"
-                            + emp.title + "\n"
-                            + "Salary:" + emp.salary + "\n"
-                            + emp.dept_name + "\n"
-                            + "Manager: " + emp.manager + "\n");
+            return ;
         }
     }
 }
