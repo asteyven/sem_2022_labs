@@ -54,7 +54,8 @@ public class App
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
-                BufferedWriter writer = new BufferedWriter(new FileWriter(new File("test.txt")));
+                new File("./tmp/").mkdir();
+                BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./tmp/test.txt")));
                 writer.write("Hello World");
                 writer.close();
                 break;
