@@ -1,6 +1,10 @@
 package com.napier.sem;
 
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 
 public class App
@@ -50,6 +54,9 @@ public class App
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
+                BufferedWriter writer = new BufferedWriter(new FileWriter(new File("test.txt")));
+                writer.write("Hello World");
+                writer.close();
                 break;
             }
             catch (SQLException sqle)
@@ -60,6 +67,8 @@ public class App
             catch (InterruptedException ie)
             {
                 System.out.println("Thread interrupted? Should not happen.");
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
