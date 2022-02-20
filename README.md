@@ -6,7 +6,7 @@ lab03 Build  ![GitHub Workflow Status (branch)](https://img.shields.io/github/wo
 
 License ![GitHub](https://img.shields.io/github/license/Kevin-Sim/sem_2022_labs)
 
-![Releases](https://img.shields.io/github/release/Kevin-Sim/sem_2022_labs?style=flat-square)
+Release ![Releases](https://img.shields.io/github/release/Kevin-Sim/sem_2022_labs?style=flat-square)
 
 ## changed to world db
 
@@ -55,3 +55,7 @@ commit to image
 `docker commit <container ID> <Image name>`
 
 Then restarting new image maintains changes
+
+Copy from container works if running or not
+
+`docker container cp sem_2022_labs_app_1:./tmp/tmp ./`
