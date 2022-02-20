@@ -35,7 +35,7 @@ public class App {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String sql = "select * from country order by Population desc ";
+            String sql = "select * from country order by Population desc;";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(sql);
             // Return new employee if valid.
@@ -60,6 +60,7 @@ public class App {
                         lifeExpectancy, gnp, gnpOld, localName, governmentForm, headOfState, capital, code2);
                 sb.append(country.toString() + "\r\n");
             }
+            new File("./tmp/").mkdir();
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./tmp/report1.txt")));
             writer.write(sb.toString());
             writer.close();
@@ -92,9 +93,6 @@ public class App {
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
-                new File("./tmp/").mkdir();
-
-//                while(true){;}
                 break;
             } catch (SQLException sqle) {
                 System.out.println("Failed to connect to database attempt " + Integer.toString(i));
