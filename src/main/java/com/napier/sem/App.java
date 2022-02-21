@@ -6,7 +6,6 @@ import com.napier.sem.world.Country;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.*;
 
 public class App {
@@ -21,7 +20,7 @@ public class App {
         App a = new App();
 
         // Connect to database
-        a.connect();
+        a.connect("db:3306");
 
         // Disconnect from database
         a.disconnect();
@@ -72,8 +71,9 @@ public class App {
 
     /**
      * Connect to the MySQL database.
+     * @param conString Use db:3306 for docker and localhost:33060 for local or Integration Tests
      */
-    public void connect() {
+    public void connect(String conString) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -89,7 +89,7 @@ public class App {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + conString + "/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
