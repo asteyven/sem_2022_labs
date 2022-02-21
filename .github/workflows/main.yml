@@ -25,7 +25,8 @@ jobs:
           docker stop world
           docker rm world
           docker image rm db
-          rm -r .\tmp\
+          ls
+          rm -r .\tmp
 
 #     Check docker-compose still working
   DockerApp:
