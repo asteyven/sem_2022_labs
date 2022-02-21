@@ -18,10 +18,12 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Test & Package with Maven 📦
-        run: mvn package
+      - name: Package with Maven 📦
+        run: mvn package -DskipTests=true
       - name: Run docker compose 🖧
         run: docker-compose up --abort-on-container-exit
+      - name: Integration Tests 🧪
+        run: mvn test
       - name: Copy Output 💾
         run: docker container cp sem_2022_labs_app_1:./tmp/tmp ./
       - name: Deploy 🚀
