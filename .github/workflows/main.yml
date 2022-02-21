@@ -20,10 +20,10 @@ jobs:
           distribution: 'adopt'
       - name: Package with Maven 📦
         run: mvn package -DskipTests=true
-      - name: Run docker compose 🖧
-        run: docker-compose up --abort-on-container-exit
-      - name: Integration Tests 🧪
-        run: mvn test
+      - name: Run docker compose And Integration Tests🖧
+        run: | 
+          docker-compose up --abort-on-container-exit      
+          mvn test
       - name: Copy Output 💾
         run: docker container cp sem_2022_labs_app_1:./tmp/tmp ./
       - name: Deploy 🚀
