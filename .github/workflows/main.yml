@@ -22,8 +22,9 @@ jobs:
         run: mvn package -DskipTests=true
       - name: Run docker compose And Integration Tests🖧
         run: | 
-          docker-compose up --abort-on-container-exit      
+          docker-compose up      
           mvn test
+          docker compose down
       - name: Copy Output 💾
         run: docker container cp sem_2022_labs_app_1:./tmp/tmp ./
       - name: Deploy 🚀
