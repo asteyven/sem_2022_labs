@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  Integration Tests:
+  IntegrationTests:
     name: Integration Tests 🗺
     runs-on: ubuntu-20.04
     steps:
@@ -28,7 +28,7 @@ jobs:
           rm -r .\tmp\
 
 #     Check docker-compose still working
-  Docker Tests:
+  DockerApp:
     name: Docker App Integration
     runs-on: ubuntu-20.04
     steps:
