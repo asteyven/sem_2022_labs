@@ -23,13 +23,11 @@ public class App {
         // Connect to database
         a.connect();
 
-        a.report1();
-
         // Disconnect from database
         a.disconnect();
     }
 
-    private void report1() {
+    public void report1() {
         StringBuilder sb  = new StringBuilder();
         try {
             // Create an SQL statement
