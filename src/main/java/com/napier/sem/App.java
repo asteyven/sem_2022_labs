@@ -22,6 +22,8 @@ public class App {
         // Connect to database
         a.connect("db:3306", 30000);
 
+        a.report1();
+
         // Disconnect from database
         a.disconnect();
     }
