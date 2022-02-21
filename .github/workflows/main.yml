@@ -25,9 +25,6 @@ jobs:
           docker stop world
           docker rm world
           docker image rm db
-          ls
-          rm -r .\tmp
-
 #     Check docker-compose still working
   DockerApp:
     name: Docker App Integration
