@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Build with Maven 📦
+      - name: Test & Package with Maven 📦
         run: mvn package
       - name: Run docker compose 🖧
         run: docker-compose up --abort-on-container-exit
