@@ -20,7 +20,7 @@ public class App {
         App a = new App();
 
         // Connect to database
-        a.connect("db:3306");
+        a.connect("db:3306", 30000);
 
         // Disconnect from database
         a.disconnect();
@@ -72,8 +72,9 @@ public class App {
     /**
      * Connect to the MySQL database.
      * @param conString Use db:3306 for docker and localhost:33060 for local or Integration Tests
+     * @param i
      */
-    public void connect(String conString) {
+    public void connect(String conString, int delay) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -87,9 +88,10 @@ public class App {
             System.out.println("Connecting to database...");
             try {
                 // Wait a bit for db to start
-                Thread.sleep(30000);
+                Thread.sleep(delay);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://" + conString + "/world?useSSL=false", "root", "example");
+                //Added allowPublicKeyRetrieval=true to get Integration Tests to work. Possibly due to accessing from another class?
+                con = DriverManager.getConnection("jdbc:mysql://" + conString + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {

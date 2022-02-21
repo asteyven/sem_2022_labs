@@ -18,17 +18,24 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Package with Maven 📦
-        run: mvn package -DskipTests=true
-      - name: Run docker compose And Integration Tests🖧
-        run: | 
-          docker-compose up      
+      - name: Build & Run database Then Integration Tests🖧
+        run: |
+          docker build -t db ./world 
+          docker run --name world -dp 33060:3306 db     
           mvn test
-          docker compose down
-      - name: Copy Output 💾
-        run: docker container cp sem_2022_labs_app_1:./tmp/tmp ./
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with:
-          branch: reports # The branch the action should deploy to.
-          folder: tmp # The folder to deploy
+          docker stop world
+          docker rm world
+          docker image rm db
+          rm -r .\tmp\
+#     Check docker-compose still working
+    - name: Build with Maven 📦
+      run: mvn package
+    - name: Run docker compose 🖧
+      run: docker-compose up --abort-on-container-exit
+    - name: Copy Output 💾
+      run: docker container cp sem_2022_labs_app_1:./tmp/tmp ./
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        branch: reports # The branch the action should deploy to.
+        folder: tmp # The
