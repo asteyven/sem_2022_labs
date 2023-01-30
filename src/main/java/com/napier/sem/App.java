@@ -20,6 +20,9 @@ public class App {
         App a = new App();
 
         // Connect to database
+        /**
+         * use db:3306 for docker and localhost:33060 for local or Integration Tests
+         */
         a.connect("db:3306", 30000);
 
         a.report1();
@@ -63,6 +66,7 @@ public class App {
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./tmp/report1.txt")));
             writer.write(sb.toString());
             writer.close();
+            System.out.println(sb.toString());
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get employee details");

@@ -1,8 +1,6 @@
 # SEM_Demo
 
-Master Build  ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Kevin-Sim/sem_2022_labs/A%20workflow%20for%20my%20Hello%20World%20App?style=flat-square)
-
-lab03 Build  ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/Kevin-Sim/sem_2022_labs/A%20workflow%20for%20my%20Hello%20World%20App/lab03?style=flat-square)
+Master Build  ![workflow](https://github.com/Kevin-Sim/sem_2022_labs/actions/workflows/main.yml/badge.svg)
 
 License ![GitHub](https://img.shields.io/github/license/Kevin-Sim/sem_2022_labs)
 
@@ -10,6 +8,13 @@ Release ![Releases](https://img.shields.io/github/release/Kevin-Sim/sem_2022_lab
 
 ## changed to world db
 
+Add Integration Test to GitHub Actions and Code
+
+- starts db using Dockerfile exposing port 33060
+- Runs maven tests locally (in GitHub Actions)
+- Tidies up
+
+`---------------------------------`
 
 To tag 
 
