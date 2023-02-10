@@ -1,5 +1,7 @@
 # Use the latest MySQL image
-FROM mysql
+# FROM mysql
+# Mac Fix
+FROM mysql/mysql-server
 COPY world.sql /docker-entrypoint-initdb.d
 ENV MYSQL_ROOT_PASSWORD example
 
