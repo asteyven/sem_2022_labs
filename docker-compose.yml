@@ -3,6 +3,7 @@ services:
   # Application Dockerfile is in same folder which is .
   app:
     build: .
+# volume stops connection if using # Mac Fix  FROM mysql/mysql-server in database Dockerfile
     volumes:
       - .\target:/tmp
 
