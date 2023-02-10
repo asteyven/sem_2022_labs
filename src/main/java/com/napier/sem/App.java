@@ -23,7 +23,7 @@ public class App {
         /**
          * use db:3306 for docker and localhost:33060 for local or Integration Tests
          */
-        a.connect("localhost:33060", 0);
+        a.connect("db:3306", 30000);
 
         a.report1();
 
