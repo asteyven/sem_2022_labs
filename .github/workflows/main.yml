@@ -43,6 +43,14 @@ jobs:
         run: mvn package
       - name: Run docker compose 🖧
         run: docker-compose up --abort-on-container-exit
+      - name: auto release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          automatic_release_tag: "latest"
+          files: |
+            ./target/*.jar
       - name: Copy Output 💾
         run: docker container cp sem_2022_labs_app_1:./tmp/tmp ./
       - name: Deploy 🚀
@@ -50,3 +58,5 @@ jobs:
         with:
           branch: reports # The branch the action should deploy to.
           folder: tmp # The
+    
+      
